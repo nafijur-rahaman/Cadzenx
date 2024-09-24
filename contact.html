@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadzenx - Civil Engineering Design Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .slide-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .slide-right.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .service-card {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .service-card.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+   
+      .bg-image {
+        background-image: url(./img/illustration-construction-site.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .bg-image1 {
+        background-image: url(./img/illustration-construction-site\ \(1\).jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .backdrop {
+        backdrop-filter: blur(8px);
+      }
+      .text-shadow {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      }
+
+
+    </style>
+
+
+</head>
+<body class="font-sans antialiased bg-blue-50">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo Slot -->
+      <div class="flex items-center">
+        <a href="#">
+          <img src="./img/WhatsApp Image 2024-09-24 at 01.56.59_6e72e0f6.jpg" alt="Company Logo" class="h-10 sm:h-12">
+        </a>
+       <a href="./home.html"> <span class="text-white text-xl sm:text-3xl font-bold ml-3">Cadzenx</span></a>
+      </div>
+      
+      <!-- Navigation Links -->
+      <div class="hidden md:flex space-x-6 lg:space-x-8 text-white">
+        <a href="./home.html"  class="hover:text-yellow-500 text-lg font-semibold hover:underline">Home</a>
+        <a href="./update.html" class="hover:text-yellow-500 text-lg font-semibold  hover:underline">Services</a>
+        <a href="./update.html" class="hover:text-yellow-500 text-lg font-semibold hover:underline">Projects</a>
+        <a href="./about.html" class="hover:text-yellow-500 text-lg font-semibold hover:underline">About Us</a>
+        <a href="./contact.html" class="hover:text-yellow-500 text-lg font-semibold hover:underline">Contact</a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="mobile-menu" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu-items" class="md:hidden hidden">
+      <div class="flex flex-col items-center mt-4">
+        
+        <a href="./home.html" class="text-white hover:text-yellow-500 py-2">Home</a>
+        <a href="./update.html" class="text-white hover:text-yellow-500 py-2">Services</a>
+        <a href="./update.html" class="text-white hover:text-yellow-500 py-2">Projects</a>
+        <a href="./about.html" class="text-white hover:text-yellow-500 py-2">About Us</a>
+        <a href="./contact.html" class="text-white hover:text-yellow-500 py-2">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container mx-auto py-16">
+    <h1 class="text-5xl font-bold text-gray-800 text-center mb-4">Contact Us</h1>
+    <p class="text-xl text-gray-600 text-center mb-8">"CadzenX" ensures your Vision is realized with excellence and efficiency.</p>
+  
+    <div class="flex flex-col md:flex-row md:space-x-6">
+      <!-- Address Section -->
+      <div class="md:w-1/3 p-4 rounded-lg mb-6 md:mb-0 bg-white shadow-lg">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Get in touch</h2>
+        <p class="text-lg text-gray-600 mb-2">123 Cadzenx Street,</p>
+        <p class="text-lg text-gray-600 mb-2">Dhaka, Bangladesh</p>
+        <p class="text-lg text-gray-600">Phone1: +8801581431108</p>
+        <p class="text-lg text-gray-600">Phone2: +8801747459494</p>
+        <p class="text-lg text-gray-600">Email: <a href="mailto:cadzenx@gmail.com" class="text-blue-600 underline">cadzenx@gmail.com</a></p>
+      </div>
+  
+      <!-- Contact Form Section -->
+      <div class="md:w-2/3">
+        <form action="#" method="POST" class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
+            <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" placeholder="Your Name">
+          </div>
+  
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
+            <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" placeholder="Your Email">
+          </div>
+  
+          <div class="mb-4">
+            <label for="subject" class="block text-gray-700 font-semibold mb-2">Subject</label>
+            <input type="text" id="subject" name="subject" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" placeholder="Subject">
+          </div>
+  
+          <div class="mb-4">
+            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+            <textarea id="message" name="message" required rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" placeholder="Your Message"></textarea>
+          </div>
+  
+          <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+  <footer class="bg-gray-800 text-white py-10">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="mb-6 md:mb-0">
+                <h2 class="text-2xl font-semibold">Cadzenx</h2>
+                <p class="mt-2">Innovating civil engineering solutions for the future.</p>
+            </div>
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+                <ul class="space-y-2">
+                  <li><a href="./home.html" class="text-gray-400 hover:text-white hover:underline">Home</a></li>
+                  <li><a href="./update.html" class="text-gray-400 hover:text-white hover:underline">Services</a></li>
+                  <li><a href="./update.html" class="text-gray-400 hover:text-white hover:underline">Projects</a></li>
+                  <li><a href="./about.html" class="text-gray-400 hover:text-white hover:underline">About us</a></li>
+                  <li><a href="./contact.html" class="text-gray-400 hover:text-white hover:underline">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 text-xl hover:text-blue-600">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 text-xl hover:text-blue-400">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 text-xl hover:text-blue-700">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-10 border-t border-gray-700 pt-4 text-center">
+            <p class="text-sm">Designed by <a href="#" class="text-gray-400 hover:text-white hover:underline">Md. Nafijur Rahaman</a></p>
+            <p class="text-sm">&copy; 2024 Cadzenx. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
